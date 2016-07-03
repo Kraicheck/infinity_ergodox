@@ -84,7 +84,7 @@ OPT_DEFS = -DCORTEX_VTOR_INIT=0x00002000
 #
 #BOOTMAGIC_ENABLE = yes	# Virtual DIP switch configuration
 ## (Note that for BOOTMAGIC on Teensy LC you have to use a custom .ld script.)
-#MOUSEKEY_ENABLE = yes	# Mouse keys
+MOUSEKEY_ENABLE = yes	# Mouse keys
 #EXTRAKEY_ENABLE = yes	# Audio control and System control
 CONSOLE_ENABLE = yes	# Console for debug
 COMMAND_ENABLE = yes    # Commands for debug and configuration
@@ -98,7 +98,7 @@ else
 # These options are incompatible with the visualizer
 STATUS_LED_ENABLE = yes # Enable CAPS LOCK display for the LCD screen
 endif
-MASTER = left
+MASTER = right
 
 
 ifdef LCD_ENABLE
