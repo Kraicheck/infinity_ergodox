@@ -52,19 +52,19 @@ const uint8_t keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 		LBRC,Q,   W,   E,   R,   T,   NO,
 		GRV, A,   S,   D,   F,   G,
 		CAPS,Z,   X,   C,   V,   B,   NO,
-		LCTL,LGUI, LEFT,RGHT,SPC,
-									  LCTL,LALT,
-										   HOME,
-								 SPC,DEL, END,
+		LCTL,LGUI, NO,NO,SPC,
+									  LEFT,RIGHT,
+										   UP,
+								 SPC,DEL, DOWN,
 		// right hand
 			 NO, 6,   7,   8,   9,   0,   MINS,
 			 LBRC,Y,   U,   I,   O,   P,   RBRC,
 				  H,   J,   K,   L,   SCLN,QUOT,
 			 NO, N,   M,   COMM,DOT, SLSH,BSLS,
-					   ENT,UP,DOWN,  RGUI,RCTL,
-		RALT,RCTL,
+					   ENT,NO,NO,  RGUI,RCTL,
+		HOME,END,
 		PGUP,
-		PGDN,BSPC, ENT
+		PGDN,INS, ENT
     ),
     // Base
 	[_BASE]= KEYMAP(
@@ -73,19 +73,19 @@ const uint8_t keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 		FN5,Q,   W,   E,   R,   T,   NO,
 		FN9, A,   S,   D,   F,   G,
 		FN2,Z,   X,   C,   V,   B,   NO,
-		LCTL,LGUI, LEFT,FN6,SPC,
-									  LCTL,LALT,
-										   HOME,
-								 SPC,DEL, END,
+		LCTL,LGUI, NO,FN6,SPC,
+									LEFT,RIGHT,
+										   UP,
+								 SPC,DEL, DOWN,
 		// right hand
 			 BTLD, 6,   7,   8,   9,   0,   MINS,
 			 LBRC,Y,   U,   I,   O,   P,   FN4,
 				  H,   J,   K,   L,   SCLN,FN8,
 			 FN0, N,   M,   COMM,DOT, SLSH,FN1,
 			 	 	 	ENT,FN7,DOWN,  RGUI,RCTL,
-		RALT,RCTL,
+		HOME,END,
 		PGUP,
-		PGDN,BSPC, ENT
+		PGDN,INS, ENT
 	),
 
 	// Shift left side
