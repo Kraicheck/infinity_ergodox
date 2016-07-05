@@ -26,22 +26,23 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define _BASE 0
 #define _SHIFT_L 1
 #define _SHIFT_R 2
-#define _NRS 3
 #define _NRS_L 4
 #define _NRS_R 5
-#define _NAV_L 6
-#define _NAV_R 7
+#define _NRS 6
+#define _FUNC 7
+#define _NAV_L 8
+#define _NAV_R 9
 
-#define _QWERTY 8
+#define _QWERTY 10
 
-#define _SP_LSHIFT 10
-#define _SP_RSHIFT 11
-#define _SP_LCTRL 12
-#define _SP_RCTRL 13
-#define _SP_LALT 14
-#define _SP_RALT 15
-#define _SP_LGUI 16
-#define _SP_RGUI 17
+#define _SP_LSHIFT 20
+#define _SP_RSHIFT 21
+#define _SP_LCTRL 22
+#define _SP_RCTRL 23
+#define _SP_LALT 24
+#define _SP_RALT 25
+#define _SP_LGUI 26
+#define _SP_RGUI 27
 
 const uint8_t keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 	// Qwerty
@@ -51,7 +52,7 @@ const uint8_t keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 		LBRC,Q,   W,   E,   R,   T,   NO,
 		GRV, A,   S,   D,   F,   G,
 		CAPS,Z,   X,   C,   V,   B,   NO,
-		LGUI,GRV, BSLS,LEFT,SPC,
+		LCTL,LGUI, LEFT,RGHT,SPC,
 									  LCTL,LALT,
 										   HOME,
 								 SPC,DEL, END,
@@ -60,7 +61,7 @@ const uint8_t keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 			 LBRC,Y,   U,   I,   O,   P,   RBRC,
 				  H,   J,   K,   L,   SCLN,QUOT,
 			 NO, N,   M,   COMM,DOT, SLSH,BSLS,
-					   ENT,DOWN,UP,  RGHT,RGUI,
+					   ENT,UP,DOWN,  RGUI,RCTL,
 		RALT,RCTL,
 		PGUP,
 		PGDN,BSPC, ENT
@@ -68,20 +69,20 @@ const uint8_t keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // Base
 	[_BASE]= KEYMAP(
 		// left hand
-		EQL, 1,   2,   3,   4,   5,   ESC,
+		EQL, 1,   2,   3,   4,   5,   BTLD,
 		FN5,Q,   W,   E,   R,   T,   NO,
-		FN7, A,   S,   D,   F,   G,
+		FN9, A,   S,   D,   F,   G,
 		FN2,Z,   X,   C,   V,   B,   NO,
-		LGUI,GRV, BSLS,LEFT,SPC,
+		LCTL,LGUI, LEFT,FN6,SPC,
 									  LCTL,LALT,
 										   HOME,
 								 SPC,DEL, END,
 		// right hand
 			 BTLD, 6,   7,   8,   9,   0,   MINS,
 			 LBRC,Y,   U,   I,   O,   P,   FN4,
-				  H,   J,   K,   L,   SCLN,FN6,
+				  H,   J,   K,   L,   SCLN,FN8,
 			 FN0, N,   M,   COMM,DOT, SLSH,FN1,
-					   ENT,DOWN,UP,  RGHT,RGUI,
+			 	 	 	ENT,FN7,DOWN,  RGUI,RCTL,
 		RALT,RCTL,
 		PGUP,
 		PGDN,BSPC, ENT
@@ -101,7 +102,7 @@ const uint8_t keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         // right hand
              TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,
              TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,RBRC,
-                  FN17,FN14,FN13,FN11,TRNS,QUOT,
+                  FN27,FN24,FN23,FN21,TRNS,QUOT,
              TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,
                        TRNS,TRNS,TRNS,TRNS,TRNS,
         TRNS,TRNS,
@@ -114,7 +115,7 @@ const uint8_t keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 		// left hand
 		TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,
 		LBRC,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,
-		GRV,TRNS,FN10,FN12,FN14,FN16,
+		GRV,TRNS,FN20,FN22,FN24,FN26,
 		TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,
 		TRNS,TRNS,TRNS,TRNS,TRNS,
 									  TRNS,TRNS,
@@ -145,7 +146,7 @@ const uint8_t keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 		// right hand
 			 TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,
 			 TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,
-				  FN17,FN14,FN13,FN11,TRNS,QUOT,
+				  FN27,FN24,FN23,FN21,TRNS,QUOT,
 			 TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,BSLS,
 					   TRNS,TRNS,TRNS,TRNS,TRNS,
 		TRNS,TRNS,
@@ -158,7 +159,7 @@ const uint8_t keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 		// left hand
 		TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,
 		TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,
-		GRV,TRNS,FN10,FN12,FN14,FN16,
+		GRV,TRNS,FN20,FN22,FN24,FN26,
 		CAPS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,
 		TRNS,TRNS,TRNS,TRNS,TRNS,
 									  TRNS,TRNS,
@@ -175,6 +176,53 @@ const uint8_t keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 		TRNS,TRNS,TRNS
 	),
 
+	// Functions
+	[_FUNC] = KEYMAP(
+		// left hand
+		TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,
+		F1,F2,F3,F4,F5,F6,TRNS,
+		F7,F8,F9,F10,F11,F12,
+		TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,
+		TRNS,TRNS,TRNS,TRNS,TRNS,
+									  TRNS,TRNS,
+										   TRNS,
+								 TRNS,TRNS,TRNS,
+		// right hand
+			 TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,
+			 TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,
+				  FN27,FN24,FN23,FN21,TRNS,TRNS,
+			 TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,
+					   TRNS,TRNS,TRNS,TRNS,TRNS,
+		TRNS,TRNS,
+		TRNS,
+		TRNS,TRNS,TRNS
+	),
+
+
+	// Numbers
+	[_NRS] = KEYMAP(
+		// left hand
+		TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,
+		TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,
+		TRNS,TRNS,FN20,FN22,FN24,FN26,
+		TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,
+		TRNS,TRNS,TRNS,TRNS,TRNS,
+									  TRNS,TRNS,
+										   TRNS,
+								 TRNS,TRNS,TRNS,
+		// right hand
+			 TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,
+			 TRNS,1,2,3,4,5,6,
+				  7,8,9,0,MINS,EQL,
+			 TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,
+					   TRNS,TRNS,TRNS,TRNS,TRNS,
+		TRNS,TRNS,
+		TRNS,
+		TRNS,TRNS,TRNS
+	),
+
+
+
 	// Navigation left side (mouse controls)
 	[_NAV_L] = KEYMAP(
         // left hand
@@ -189,7 +237,7 @@ const uint8_t keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         // right hand
              TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,
              TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,RBRC,
-                  FN17,FN14,FN13,FN11,TRNS,TRNS,
+                  FN27,FN24,FN23,FN21,TRNS,TRNS,
              TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,BSLS,
                        TRNS,TRNS,TRNS,TRNS,TRNS,
         TRNS,TRNS,
@@ -202,7 +250,7 @@ const uint8_t keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 		// left hand
 		TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,
 		LBRC,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,
-		TRNS,TRNS,FN10,FN12,FN14,FN16,
+		TRNS,TRNS,FN20,FN22,FN24,FN26,
 		CAPS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,
 		TRNS,TRNS,TRNS,TRNS,TRNS,
 									  TRNS,TRNS,
@@ -324,6 +372,8 @@ static void handle_special_mod(uint8_t mod, keyrecord_t *record) {
 enum function_id {
 	NAVIGATION_LAYER,
 	MOUSE_LAYER,
+	NUMBERS_LAYER,
+	FUNCTIONS_LAYER,
 	NUMBERS_L_LAYER,
 	NUMBERS_R_LAYER,
 	SHIFT_L_LAYER,
@@ -359,6 +409,12 @@ void action_function(keyrecord_t *record, uint8_t id, uint8_t opt) {
 	case NUMBERS_R_LAYER:
 		handle_layer(_NRS_R, record);
 		break;
+	case NUMBERS_LAYER:
+		handle_layer(_NRS, record);
+		break;
+	case FUNCTIONS_LAYER:
+		handle_layer(_FUNC, record);
+	break;
 	case SLSHIFT:
 		handle_special_mod(KC_LSHIFT, record);
 		break;
@@ -390,7 +446,8 @@ const uint16_t PROGMEM fn_actions[] = {
 	[_SHIFT_R] = ACTION_FUNCTION_TAP(SHIFT_R_LAYER),
 	[_NRS_L] = ACTION_FUNCTION_TAP(NUMBERS_L_LAYER),
 	[_NRS_R] = ACTION_FUNCTION_TAP(NUMBERS_R_LAYER),
-	//[_NRS] = ACTION_LAYER_TOGGLE(_NRS),
+	[_NRS] = ACTION_FUNCTION(NUMBERS_LAYER),
+	[_FUNC] = ACTION_FUNCTION(FUNCTIONS_LAYER),
 	[_SP_LSHIFT] = ACTION_FUNCTION(SLSHIFT),
 	[_SP_LCTRL] = ACTION_FUNCTION(SLCTRL),
 	[_SP_LALT] = ACTION_FUNCTION(SLALT),
