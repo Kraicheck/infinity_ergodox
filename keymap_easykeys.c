@@ -48,7 +48,7 @@ const uint8_t keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 	// Qwerty
 	[_QWERTY]= KEYMAP(
 		// left hand
-		EQL, 1,   2,   3,   4,   5,   ESC,
+		1, 2,   3,   4,   5,   6, ESC,
 		LBRC,Q,   W,   E,   R,   T,   NO,
 		GRV, A,   S,   D,   F,   G,
 		CAPS,Z,   X,   C,   V,   B,   NO,
@@ -57,7 +57,7 @@ const uint8_t keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 										   UP,
 								 SPC,DEL, DOWN,
 		// right hand
-			 NO, 6,   7,   8,   9,   0,   MINS,
+			 ESC, 7,   8,   9,   0,   MINS, EQL,
 			 LBRC,Y,   U,   I,   O,   P,   RBRC,
 				  H,   J,   K,   L,   SCLN,QUOT,
 			 NO, N,   M,   COMM,DOT, SLSH,BSLS,
@@ -69,7 +69,7 @@ const uint8_t keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // Base
 	[_BASE]= KEYMAP(
 		// left hand
-		EQL, 1,   2,   3,   4,   5,   BTLD,
+		1,   2,   3,   4,   5,  6,  BTLD,
 		FN5,Q,   W,   E,   R,   T,   NO,
 		FN9, A,   S,   D,   F,   G,
 		FN2,Z,   X,   C,   V,   B,   NO,
@@ -78,7 +78,7 @@ const uint8_t keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 										   UP,
 								 SPC,DEL, DOWN,
 		// right hand
-			 BTLD, 6,   7,   8,   9,   0,   MINS,
+			 BTLD, 7,   8,   9,   0,   MINS, EQL,
 			 LBRC,Y,   U,   I,   O,   P,   FN4,
 				  H,   J,   K,   L,   SCLN,FN8,
 			 FN0, N,   M,   COMM,DOT, SLSH,FN1,
